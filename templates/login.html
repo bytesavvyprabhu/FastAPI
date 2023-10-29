@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Interview.AI</title>
+    <link href="{{url_for('static', path='/signup.css')}}" rel="stylesheet">
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>Welcome to Interview.AI</h1>
+        <div class="button-container">
+            <a href="#" class="button" id="showLoginPopup">LogIN</a>
+            <a href="#" class="button" id="showSignupPopup">SignUP</a>
+        </div>
+    </div>
+
+    <div class="popup" id="loginPopup">
+        <div class="popup-content">
+            <span class="close" id="closeLoginPopup">&times;</span>
+            <h2>LogIN</h2>
+            <form action="/login" method="post">
+                <input type="text" name="email" placeholder="Enter Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="hidden" name="csrf_token" value="{{ request.csrf_token }}">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="popup" id="signupPopup">
+        <div class "popup-content">
+            <span class="close" id="closeSignupPopup">&times;</span>
+            <h2>SignUP</h2>
+            <form action="/signup" method="post">
+                <input type="text" name="name" placeholder="Name">
+                <input type="text" name="email" placeholder="Enter Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="hidden" name="csrf_token" value="{{ request.csrf_token }}">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="static/script.js"></script>
+</body>
+</html>

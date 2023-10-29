@@ -1,0 +1,38 @@
+/* styles.css */
+
+body {
+    background-color: #001f3f; /* Dark blue background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.welcome-container {
+    text-align: center;
+    color: #01FF70; /* Green text color */
+    font-size: 36px;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #01FF70; /* Green button background color */
+    color: #001f3f; /* Dark blue button text color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.button:hover {
+    background-color: #00D455; /* Button background color on hover */
+}
